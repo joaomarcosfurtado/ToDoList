@@ -4,8 +4,7 @@ import { Profile } from './Profile';
 export function SideBar() {
   return (
     <div className="sideBar">
-      <Profile/>
-      <p>Hello
-    </p></div>
+      <Profile />
+    </div>
   )
 }
