@@ -1,0 +1,7 @@
+.sideBar {
+  background: var(--background);
+  color: var(--title);
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+}
