@@ -1,5 +1,5 @@
 .profile {
-  position: fixed;
+  position: relative;
   background: var(--background);
   color: var(--title);
   width: 300px;
@@ -7,7 +7,7 @@
 }
 
 .userPicture {
-  position: absolute;
+  position: relative;
   background-color: rgba(173, 173, 173, 0.4);
   height: 35px;
   border-radius: 50%;
@@ -16,11 +16,11 @@
 }
 
 .boxUserName {
-  position: absolute;
+  position: relative;
   height: 20px;
   width: 170px;
-  top: 30%;
-  left: 70px;
+  top: -50%;
+  left: 20%;
   text-align: Left;
 }
 
@@ -32,7 +32,8 @@
 
 .searchLists {
   position: relative;
+  width: 24px;
   height: 35px;
-  top: 15%;
+  top: -105%;
   left: 85%;
 }
