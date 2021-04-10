@@ -1,0 +1,101 @@
+.inputGroup {
+  background-color: #fff;
+  display: block;
+  position: relative;
+}
+
+.inputGroup label {
+  padding: 8px 30px;
+  width: 100%;
+  display: block;
+  text-align: left;
+  color: #3c454c;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transition: color 500ms ease-in;
+  overflow: hidden;
+  border-bottom: .2px solid #a3c7d8;
+}
+
+.inputGroup label::before {
+  width: 100px;
+  height: 10px;
+  border-radius: 50%;
+  content: "";
+  background-color: var(--primary);
+  /* background-color: rgb(166, 130, 226); */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale3d(1, 1, 1);
+  transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  z-index: -1;
+}
+
+.inputGroup label::after {
+  width: 21px;
+  height: 21px;
+  content: "";
+  border: 2px solid #d1d7dc;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
+  background-repeat: no-repeat;
+  background-position-x: -2px;
+  background-position-y: -0.5px;
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: all 500ms ease-in;
+}
+
+.inputGroup input:checked ~ label {
+  color: #fff;
+}
+
+.inputGroup input:checked ~ label::before {
+  transform: translate(-50%, -50%) scale3d(56, 56, 1);
+  opacity: 1;
+}
+
+.inputGroup input:checked ~ label::after {
+  /* background-color: #54e0c7; */
+  background-color: var(--darkpurple);
+  border-color: var(--darkpurple);;
+}
+
+.inputGroup input {
+  width: 32px;
+  height: 32px;
+  order: 1;
+  z-index: 2;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.inputGroup .form-ToDoListItem {
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 0.1px solid #c6c5c5;
+}
+
+.inputGroup label > p {
+  line-height: 12px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+label:first-child {
+  font-size: 21px;
+}

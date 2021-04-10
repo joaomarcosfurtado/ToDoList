@@ -1,0 +1,131 @@
+.overlay {
+  background: #f2f3f5cc;
+  background: #d5d5dfcc;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 2;
+}
+
+.container-add-new-todo {
+  background: white;
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem 3rem;
+  border-radius: 5px;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  position: relative;
+}
+
+.container-add-new-todo header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: left;
+  color: var(--darkpurple);
+  background-size: contain;
+
+  padding-bottom: 1rem;
+}
+
+
+
+.container-add-new-todo button {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  background: transparent;
+  border: 0;
+  font-size: 0;
+}
+
+.Modal-Add-ToDo {
+  align-items: left;
+  display: flex;
+}
+
+.Modal-Add-ToDo {
+  flex-direction: column;
+}
+
+.Modal-Add-ToDo label {
+  padding: 4px;
+
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  color: var(--primary);
+  
+}
+
+.Modal-Add-ToDo input[type="text"], 
+.Modal-Add-ToDo input[type="date"] {
+  height: 22px;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+	/* margin: 0 auto; */
+  padding: 1rem .4rem;
+  border-radius: 0.2rem;
+  /* background-color: #e8d2e4; */
+  background-color: #f9ecf6;
+  border: none;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+}
+
+.Modal-Add-ToDo textarea {
+  height: 65px;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  /* font-size: 1.2rem; */
+	/* margin: 0 auto; */
+  padding: .2rem .4rem;
+  border-radius: 0.2rem;
+  background-color: #f9ecf6;
+  border: none;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+  
+}
+
+.Modal-Add-ToDo input[type="submit"] { 
+  background-color: var(--primary);
+  color: #FFF;
+
+  height: 30px;
+  width: 100%;
+  margin-top: 15px;
+
+  text-decoration: none;
+  text-align: center;
+
+  transition: 0.5s;
+  
+  border: none;
+  cursor: pointer;
+  margin-left: 0;
+
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.Modal-Add-ToDo input[type="submit"]:hover{ 
+  background-color: var(--secondary);
+}
+
+.Modal-Add-ToDo input:focus, textarea:focus { 
+  outline: none !important;
+  border-color: var(--secondary);
+  box-shadow: 0 0 10px var(--secondary);
+}

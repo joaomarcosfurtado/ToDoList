@@ -1,14 +1,22 @@
-import { ListHeader } from "./components/ListHeader";
-import { SideBar } from "./components/SideBar";
-import { ToDoList } from "./components/ToDoList";
+import { LoginContext, LoginProvider } from "./contexts/LoginContext";
+import { useContext } from "react";
+
 import './styles/Global.css';
+import AppRoutes from "./pages/AppRoutes";
 
 function App() {
+  const { isLogedIn  } = useContext(LoginContext);
+  
+  console.log(isLogedIn)
   return (
     <div className="App">
-      <SideBar />
-      <ToDoList />
-      <ListHeader />
+      
+      <LoginProvider >
+      
+        <AppRoutes />
+
+      </LoginProvider>
+      
     </div>
   );
 }

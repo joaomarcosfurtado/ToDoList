@@ -1,9 +1,58 @@
 .toDoList {
-  background: var(--background);
+  background: #f5f9fcdd;
   color: var(--title);
   position: absolute;
   left: 300px;
   width: calc(100% - 300px);
   height: 75vh;
-  top: 25vh;
+  top: 25vh; 
+}
+
+.add-to-do {
+  width: 100%;
+  background: #FFF;
+}
+
+.add-to-do button {
+  height: 3rem;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  
+  border: 0;
+
+  background: #FFF;
+  color: var(--darkpurple);
+
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.add-to-do .add-icon {
+  height: 40px;
+  width: 22px;
+  margin-right: 4px;
+  color: var(--darkpurple);
+
+}
+
+.add-to-do button:hover .add-icon {
+  color: #FFF;
+  transition: 0.3s;
+}
+
+.add-to-do button:hover {
+  background: var(--primary);
+  color: #FFF;
+}
+
+
+.add-to-do .add-icon:hover {
+  color: #FFF;
 }
