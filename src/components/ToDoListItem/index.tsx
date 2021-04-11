@@ -1,5 +1,5 @@
 import {  useState } from 'react';
-import '../styles/components/ToDoListItem.css';
+import './styles.css';
 
 export function ToDoListItem() {
 

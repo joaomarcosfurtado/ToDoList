@@ -1,0 +1,96 @@
+.profile {
+  position: relative;
+  background: var(--background);
+  color: var(--title);
+  width: 300px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 280px;
+}
+
+.userPicture {
+  background-color: rgba(173, 173, 173, 0.4);
+  height: 35px;
+  border-radius: 50%;
+
+  margin-left: 8px;
+}
+
+.boxUserName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.boxUserName img {
+  margin-right: 10px;
+}
+
+.boxRightSide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+
+  cursor: pointer;
+
+}
+
+.btCloseSideBar {
+  display: none;
+}
+
+/* Input */
+
+.inputSearchCategory {
+  width: 50px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  
+ 
+  padding: 3px 10px 1px 5px;
+  transition: width 0.4s ease-in-out;
+}
+
+.inputSearchCategory:focus {
+  width: 100%;
+}
+
+.btSearchCatergory {
+  position:absolute;
+  width: 20px;
+  height: 20px;
+  top: 8px; right: 15px;
+  border:none;
+  background: transparent;
+  outline:none;
+
+  cursor: pointer;
+}
+
+
+.buttonSearchCategory {
+  /* margin-right: 10px; */
+  position: absolute;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 800px ) {
+  .profile {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .btCloseSideBar {
+    display: inline;
+  }
+
+  .btSearchCatergory {
+    right: 51px;
+  }
+}

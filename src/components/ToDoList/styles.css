@@ -56,3 +56,15 @@
 .add-to-do .add-icon:hover {
   color: #FFF;
 }
+
+/* Responsive */
+
+@media screen and (max-width: 800px) {
+  
+  .toDoList {
+    left: 0;
+    width: 100%;
+  }
+
+}
+

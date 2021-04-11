@@ -62,10 +62,12 @@
     
 }
 
-.sub-title a {
+.sub-title strong {
     text-decoration: none;
     font-weight: bold;
-    color: var(--darkpurple)
+    color: var(--darkpurple);
+
+    cursor: pointer;
 }
 
 .sub-title a:hover {
@@ -166,6 +168,8 @@
 
     display: flex;
     flex-direction: row-reverse;
+
+    cursor: pointer;
 }
 
 .form-a:hover {

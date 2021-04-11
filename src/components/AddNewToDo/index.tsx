@@ -1,11 +1,10 @@
-import '../styles/components/AddNewToDo.css'
-import btClose from '../assets/icons/close.svg'
-import { useContext } from 'react';
-import { ToDoContext } from '../contexts/ToDoContext';
+import './styles.css'
+import btClose from '../../assets/icons/close.svg'
+import { useToDo } from '../../hooks/useToDo';
 
 export function AddNewToDo() {
 
-  const { closeAddNewToDoModal } = useContext(ToDoContext);
+  const { closeAddNewToDoModal } = useToDo();
   
   return(
     <div className="overlay">

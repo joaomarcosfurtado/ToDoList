@@ -1,14 +1,13 @@
-import { ListHeader } from "../components/ListHeader";
-import { SideBar } from "../components/SideBar";
+import { ListHeader } from "../components/ListHeader/index";
+import { SideBar } from "../components/SideBar/SideBar";
 import { ToDoList } from "../components/ToDoList";
-import { TodoProvider } from "../contexts/ToDoContext"
-import { LoginContext, LoginProvider } from "../contexts/LoginContext";
-import { useContext } from "react";
+import { TodoProvider } from "../hooks/useToDo"
+import { useLogin, LoginProvider } from "../hooks/useLogin";
 
 import '../styles/Global.css';
 
 function ToDoPages() {
-  const { isLogedIn  } = useContext(LoginContext);
+  const { isLogedIn  } = useLogin();
   
   console.log(isLogedIn)
   return (

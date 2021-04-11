@@ -1,11 +1,10 @@
-import { LoginContext, LoginProvider } from "./contexts/LoginContext";
-import { useContext } from "react";
+import { useLogin, LoginProvider } from "./hooks/useLogin";
 
 import './styles/Global.css';
 import AppRoutes from "./pages/AppRoutes";
 
 function App() {
-  const { isLogedIn  } = useContext(LoginContext);
+  const { isLogedIn  } = useLogin();
   
   console.log(isLogedIn)
   return (

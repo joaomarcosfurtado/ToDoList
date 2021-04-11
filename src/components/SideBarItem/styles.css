@@ -1,0 +1,45 @@
+.SideBarItemContent {
+  margin-left: 25px;
+  max-width: 250px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sideBarItemIsActive {
+  background-color: var(--primary);
+  font-weight: bold;
+
+  transition: color 0.2s;
+}
+
+.sideBarItem .sideBarItemTitle {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.sideBarItem .sideBarItemTitle p {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.sideBarItem  > p{
+  font-size: 17px;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 800px) {
+  .SideBarItemContent {
+    width: 100%;
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .SideBarItemContent {
+    width: 100%;
+    max-width: 85%;
+  }
+}

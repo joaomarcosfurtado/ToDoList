@@ -1,4 +1,4 @@
-import { ReactNode, useState } from "react";
+import { ReactNode, useContext, useState } from "react";
 import { createContext } from "react";
 
 interface LoginContextData {
@@ -59,8 +59,8 @@ export function LoginProvider( {children}: LoginProviderProps ) {
     const axios = require('axios').default;
 
     axios.post('http://localhost:3333/users', {
-        email: email,
-        password: password
+        email,
+        password
       })
       .then(function (response: { status: any; }) {
         console.log(response.status);
@@ -104,4 +104,10 @@ export function LoginProvider( {children}: LoginProviderProps ) {
       {children} 
     </LoginContext.Provider> 
   )
+}
+
+export function useLogin(): LoginContextData {
+  const context = useContext(LoginContext);
+
+  return context;
 }

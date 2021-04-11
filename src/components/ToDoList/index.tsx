@@ -1,14 +1,15 @@
-import { ToDoListItem } from "./ToDoListItem";
+import { ToDoListItem } from "../ToDoListItem/index";
 import { RiAddCircleFill } from "react-icons/ri";
-import { useContext } from 'react';
-import { AddNewToDo } from './AddNewToDo';
-import '../styles/components/ToDoList.css';import '../styles/components/ToDoList.css';
-import { ToDoContext } from "../contexts/ToDoContext";
+import { AddNewToDo } from '../AddNewToDo/index';
+
+import { useToDo } from "../../hooks/useToDo";
+
+import './styles.css';
 
 
 export function ToDoList() {
   
-  const { openAddNewToDoModal, isAddNewToDoOpen } = useContext(ToDoContext);
+  const { openAddNewToDoModal, isAddNewToDoOpen } = useToDo();
 
   
   return (
