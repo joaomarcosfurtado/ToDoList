@@ -10,10 +10,12 @@ interface Categories {
 }
 
 interface ToDoContextData {
-  isAddNewToDoOpen: boolean;
+  isAddNewToDoModalOpen: boolean;
   isSideBarOpen: boolean;
-  openAddNewToDoModal: () => void;
-  closeAddNewToDoModal: () => void;
+  handleOpenAddNewToDoModal: () => void;
+  handleCloseAddNewToDoModal: () => void;
+  handleOpenAddCategoryToDoModal: () => void;
+  handleCloseAddNewCaterogryModal: () => void;
   openSideBar: () => void;
 }
 
@@ -26,9 +28,10 @@ export const ToDoContext = createContext( {} as ToDoContextData );
 
 export function TodoProvider( {children}: TodoProviderProps ) {
   
-  const [ toDoCategories, setToDoCategories] = useState<Categories[]>([])
-  const [isAddNewToDoOpen, setAddNewToDoOpen] = useState(false)
-  const [ isSideBarOpen, setIsSideBarOpen] = useState(false)
+  const [ toDoCategories, setToDoCategories ] = useState<Categories[]>([])
+  const [ isSideBarOpen, setIsSideBarOpen ] = useState(false)
+  const [ isAddNewToDoModalOpen, setIsAddNewToDoModalOpen ] = useState(false)
+  const [ isAddNewCategoryModalOpen, setIsAddNewCategoryModalOpen ] = useState(false)
   
   useEffect(() => {
     // const axios = require('axios').default;
@@ -65,12 +68,20 @@ export function TodoProvider( {children}: TodoProviderProps ) {
 
   },[])
   
-  function openAddNewToDoModal() {
-    setAddNewToDoOpen(true);
+  function handleOpenAddNewToDoModal() {
+    setIsAddNewToDoModalOpen(true);
   }
 
-  function closeAddNewToDoModal() {
-    setAddNewToDoOpen(false);
+  function handleCloseAddNewToDoModal() {
+    setIsAddNewToDoModalOpen(false);
+  }
+
+  function handleOpenAddCategoryToDoModal() {
+    setIsAddNewCategoryModalOpen(true);
+  }
+
+  function handleCloseAddNewCaterogryModal() {
+    setIsAddNewCategoryModalOpen(false);
   }
 
   function openSideBar() {
@@ -83,10 +94,12 @@ export function TodoProvider( {children}: TodoProviderProps ) {
   return (
     <ToDoContext.Provider 
       value={{
-        isAddNewToDoOpen, 
+        isAddNewToDoModalOpen, 
         isSideBarOpen,
-        openAddNewToDoModal, 
-        closeAddNewToDoModal,
+        handleOpenAddNewToDoModal, 
+        handleCloseAddNewToDoModal,
+        handleOpenAddCategoryToDoModal,
+        handleCloseAddNewCaterogryModal,
         openSideBar,
       }}
     >  

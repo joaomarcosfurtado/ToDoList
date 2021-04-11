@@ -1,7 +1,8 @@
-import { FaUserAlt } from "react-icons/fa";
-import { IoKey } from "react-icons/io5";
 import { useLogin } from '../hooks/useLogin';
 import { Link } from 'react-router-dom'
+
+import { FaUserAlt } from "react-icons/fa";
+import { IoKey } from "react-icons/io5";
 
 import '../styles/pages/login.css';
 
@@ -17,8 +18,8 @@ export function Login() {
         createAccount,
         email,
         password,
-        setEmail,
-        setPassword, 
+        handleGetUsername,
+        handleGetUserPassword,
     } = useLogin()
 
     
@@ -54,7 +55,7 @@ export function Login() {
                                     type="text" 
                                     placeholder="Digite seu usuário..."
                                     value={email} 
-                                    onChange={(e) => setEmail(e.target.value)}
+                                    onChange={(e) => handleGetUsername(e.target.value)}
                                 />
                             </label>
                                 
@@ -65,7 +66,7 @@ export function Login() {
                                     type="password" 
                                     placeholder="Digite sua senha..."
                                     value={password} 
-                                    onChange={(e) => setPassword(e.target.value)}
+                                    onChange={(e) => handleGetUserPassword(e.target.value)}
                                 />
                             </label>
                             

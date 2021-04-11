@@ -9,12 +9,12 @@ interface LoginContextData {
   btCriarConta: string;
   btLogin: string;
   email: string;
-  setEmail: ReactNode;
   password: string;
-  setPassword: ReactNode;
   logIn: () => void;
   logOut: () => void;
   createAccount: () => void;
+  handleGetUsername: (username: string) => void;
+  handleGetUserPassword: (password: string) => void;
 }
 
 interface LoginProviderProps {
@@ -53,6 +53,14 @@ export function LoginProvider( {children}: LoginProviderProps ) {
       setBtLogin("Login");
     }
     
+  }
+
+  function handleGetUsername (username: string) {
+    setEmail(username)
+  }
+
+  function handleGetUserPassword (password: string) {
+    setPassword(password)
   }
 
   function validateLogin() {
@@ -97,8 +105,8 @@ export function LoginProvider( {children}: LoginProviderProps ) {
         logIn,
         logOut,
         createAccount,
-        setEmail,
-        setPassword,
+        handleGetUsername,
+        handleGetUserPassword,
       }}
     >  
       {children} 
